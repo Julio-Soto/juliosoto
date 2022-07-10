@@ -1,0 +1,82 @@
+@import '../styles.scss';
+
+.nav-bar {
+    height: auto;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: $bkg-transparent;
+    backdrop-filter: blur(10px);
+    z-index: 99;
+  }
+  .logo{
+    font-family: 'Play', sans-serif;
+    color: $highlight;
+    font-size: 1.8em;
+    margin-left: 4%;
+  }
+  .nav-menu {
+    font-family: 'JetBrains Mono', monospace;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+  }
+  .nav-menu li {
+    list-style: none;
+  }
+  .nav-menu a {
+    font-size: 13px;
+    color: $brightfont;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+  }
+  .nav-menu a:hover {
+    color: $highlight;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .nav-menu {
+        width: 400px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .nav-menu {
+        height: 100vh;
+        margin: 0;
+        background-color: $bkg-light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        padding: 20vh 0 20vh 0;
+        transform: translate(100%,45%);
+    }
+    .with-trans{
+        transition: transform 0.3s ease-in;
+    }
+    .nav-active {
+        transform: translate(0%,45%);
+        /*transition: transform 0.3s ease-in;*/
+    }
+    .nav-menu li {
+        opacity: 0;
+        transform: translatex(-100px);
+        transition: all 0.2s ease-in;	    
+    }
+  
+    .nav-menu.nav-active li {
+        opacity: 1;
+        transform: translatex(0px);
+        transition: all 0.2s ease-in 0.3s;
+    } 
+    .logo{
+        font-size: 1.4em;
+    }   
+  }
+  
+    

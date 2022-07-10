@@ -1,0 +1,40 @@
+@import '../styles.scss';
+
+.page-content {
+	width: 100%;
+	height: 100vh;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.container {
+	height: auto;
+	max-width: 800px;
+	padding: 10px 2em;
+}
+.contact-title {
+    color: $highlight;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1em;
+    font-weight: 200;
+    margin: 2em;
+}
+.email-link{
+	font-size: 2.5em;
+	color: $brightfont;
+	text-decoration: none;
+}
+.social-icons{
+	margin-top: 3em;
+}
+.contact-icon {
+	color: white;
+	margin-right: 2em;
+}
+@media screen and (max-width: 480px) {
+	.email-link {
+		font-size: 2em;
+	}
+}

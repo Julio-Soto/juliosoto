@@ -1,0 +1,56 @@
+@import '../styles.scss';
+
+.burger div{
+    width: 36px;
+    height: 3px;
+    background-color: $highlight;
+    margin: 7px 0px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+.burger {
+    margin-right: 4%;
+    display: none;
+  }
+.burger div:nth-child(2) {
+    width: 24px;
+}
+.burger div:nth-child(3) {
+    width: 12px;
+}
+/*////////////////////
+//    animation
+////////////////////*/
+
+  .burger.active {
+    transition: all 0.3s ease-in-out;
+	transition-delay: 0.6s;
+	transform: rotate(45deg);
+  }
+  
+  .burger.active div:nth-child(2) {
+	width: 0px;
+}
+
+.burger.active div:nth-child(1),
+.burger.active div:nth-child(3) {
+	transition-delay: 0.3s;
+}
+
+.burger.active div:nth-child(1) {
+	transform: translateY(13px);
+}
+
+.burger.active div:nth-child(3) {
+    width: 36px;
+	transform: translateY(-7px) rotate(90deg);
+}
+
+  @media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 0vw;
+    }
+  }

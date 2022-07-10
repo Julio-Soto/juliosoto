@@ -1,0 +1,23 @@
+@import '../styles.scss';
+
+.page-content {
+	width: 100%;
+	height: 100vh;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.container {
+	height: auto;
+	max-width: 800px;
+	padding-top: 10px;
+}
+.highlighted-text {
+    color: $highlight;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1em;
+    font-weight: 200;
+    margin: 2em 0 1em 0;
+}

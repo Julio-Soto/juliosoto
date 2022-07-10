@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Ubuntu:wght@300;700&display=swap');
+
+$font: "Play", sans-serif;
+$highlight: #f72585;//aqua;
+$btn-bkg: #f725851a;
+$bkg : #190547;//hsl(258, 86%, 15%);//#3a0ca3;  //#161b22e6;
+$bkg-transparent: #1905471a;
+$bkg-light: hsl(258, 86%, 20%);
+$brightfont : #4cc9f0;//#ccd6f6;
+$semibright: #4895ef;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  background-color: $bkg;
+  color: $brightfont;
+  font-family: $font;
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+#root{
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
